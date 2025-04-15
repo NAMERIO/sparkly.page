@@ -13,9 +13,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="theme-dark">
 			<body
-				className={`${gooper.variable} ${hankenGrotesk.variable} antialiased`}
+				className={`${gooper.variable} ${hankenGrotesk.variable} antialiased bg-(--background-secondary) text-(--text-primary) min-h-screen overflow-auto!`}
+				style={{
+					overflow: "auto",
+				}}
 			>
 				{children}
 			</body>

@@ -120,9 +120,9 @@ export const validateRequest = cache(
 		isAuthenticated: boolean;
 	}> => {
 		const cookieStore = await cookies();
-		const sessionId = cookieStore.get("session")?.value ?? null;
+		const sessionToken = cookieStore.get("session")?.value ?? null;
 
-		if (!sessionId) {
+		if (!sessionToken) {
 			return {
 				user: null,
 				session: null,
@@ -130,13 +130,13 @@ export const validateRequest = cache(
 			};
 		}
 
-		const { session, user } = await validateSessionToken(sessionId);
+		const { session, user } = await validateSessionToken(sessionToken);
 		// next.js throws when you attempt to set cookie when rendering page;
+
+		if (!session || !user) return { session, user, isAuthenticated: false };
+
 		try {
 			if (session) {
-				const sessionToken = generateSessionToken();
-				const session = await createSession(sessionToken, user.id);
-
 				cookieStore.set("session", sessionToken, {
 					httpOnly: true,
 					secure: process.env.NODE_ENV === "production",

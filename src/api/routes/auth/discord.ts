@@ -60,13 +60,17 @@ DiscordRouter.get("/callback", async (c) => {
 			},
 		);
 
-		const {
-			id,
-			username,
-		}: {
+		const respnose: {
 			username: string;
 			id: string;
 		} = await discordUserResponse.json();
+
+		const {
+			id,
+			username,
+		} = respnose;
+
+		console.log({ respnose})
 
 		const existingUser = await db.query.usersTable.findFirst({
 			where: eq(usersTable.id, id),

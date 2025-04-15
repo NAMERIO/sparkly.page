@@ -1,6 +1,7 @@
 import { db } from "@/db";
 import {
 	type SessionTableSelect,
+	type UsersTableInsert,
 	type UsersTableSelect,
 	usersTable,
 } from "@/db/schema";
@@ -30,10 +31,14 @@ UserRouter.get("/protected", async (c) => {
 const zUserDataRequest = z
 	.object({
 		displayName: z.string().min(1).max(20),
+		description: z.string(),
+		status: z.enum(["online", "idle", "dnd", "offline"]), 
+		links: z.array(z.any()),
+		roles: z.array(z.any()),
 	})
 	.partial();
 
-UserRouter.post("/update-user-data", async (c) => {
+UserRouter.post("/update-data", async (c) => {
 	try {
 		const user = c.get("user")!;
 		const body = await c.req.json();
@@ -44,7 +49,7 @@ UserRouter.post("/update-user-data", async (c) => {
 			return c.json({}, 400);
 		}
 
-		const data = safeBody.data;
+		const data: Partial<UsersTableInsert> = safeBody.data!;
 
 		await db
 			.update(usersTable)

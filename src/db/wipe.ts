@@ -2,8 +2,8 @@ import { poolConnection } from ".";
 
 async function dropDatabase() {
 	try {
+		await poolConnection.query(`DROP TABLE "public"."user" CASCADE`);
 		await poolConnection.query(`DROP TABLE "public"."session" CASCADE`);
-		await poolConnection.query(`DROP TABLE "public"."users" CASCADE`);
 
 		console.log("Database wiped successfully");
 	} catch (error) {

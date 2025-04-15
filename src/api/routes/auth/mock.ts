@@ -22,7 +22,11 @@ MockRouter.get("/", async (c) => {
 			return c.redirect("/");
 		}
 
-		await db.insert(usersTable).values({ id: MOCK_USER_ID, displayName: MOCK_USER_ID, username: MOCK_USER_ID });
+		await db.insert(usersTable).values({
+			id: MOCK_USER_ID,
+			displayName: MOCK_USER_ID,
+			username: MOCK_USER_ID,
+		});
 
 		await setSessionTokenCookie(MOCK_USER_ID, c);
 		return c.redirect("/");
