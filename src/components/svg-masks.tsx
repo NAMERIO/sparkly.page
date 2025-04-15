@@ -1,6 +1,6 @@
 export function SvgMasks() {
 	return (
-		<div >
+		<div>
 			<svg
 				aria-hidden="true"
 				style={{

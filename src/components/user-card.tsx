@@ -3,8 +3,10 @@ import type { UsersTableSelect } from "@/db/schema";
 import { discordStatus } from "@/helpers/default-discord-user";
 import { Roles } from "./discord-card/roles";
 
-
-export function UserCard({ user, reactiveUserData }: {  user: UsersTableSelect, reactiveUserData?: Partial<UsersTableSelect> }) { 
+export function UserCard({
+	user,
+	reactiveUserData,
+}: { user: UsersTableSelect; reactiveUserData?: Partial<UsersTableSelect> }) {
 	user = { ...user, ...(reactiveUserData ?? {}) };
 	const status = discordStatus[user.status];
 	return (
@@ -310,9 +312,7 @@ export function UserCard({ user, reactiveUserData }: {  user: UsersTableSelect, 
 													className="defaultColor__4bd52 text-sm/normal_cf4812"
 													data-text-variant="text-sm/normal"
 												>
-													<span>
-														{ user.description }
-													</span>
+													<span>{user.description}</span>
 												</div>
 											</div>
 											<section className="section_bf424d">
@@ -513,30 +513,30 @@ export interface Link {
 	profileUrl: string | null;
 }
 
-export function getIconSrcFromUrl(url : string | null) {
+export function getIconSrcFromUrl(url: string | null) {
 	if (!url) return "";
-	
+
 	// URL parsing approach using URL constructor for more accurate domain extraction
 	try {
-	  const urlObj = new URL(url);
-	  const hostname = urlObj.hostname;
-	  
-	  switch (true) {
-		case /(?:^|\.)spotify\.com$/.test(hostname):
-		  return "/assets/d5719388ffc613da.svg";
-		case /(?:^|\.)x\.com$/.test(hostname):
-		  return "/assets/a61999ae9bfb9658.svg";
-		case /(?:^|\.)reddit\.com$/.test(hostname):
-		  return "/assets/adfd927dcc2049a5.svg";
-		case /(?:^|\.)steamcommunity\.com$/.test(hostname):
-		  return "/assets/1f7ec18f3695d4cf.svg";
-		case /(?:^|\.)battle\.net$/.test(hostname):
-		  return "/assets/163c8cb9220efc74.svg";
-		default:
-		  return "";
-	  }
+		const urlObj = new URL(url);
+		const hostname = urlObj.hostname;
+
+		switch (true) {
+			case /(?:^|\.)spotify\.com$/.test(hostname):
+				return "/assets/d5719388ffc613da.svg";
+			case /(?:^|\.)x\.com$/.test(hostname):
+				return "/assets/a61999ae9bfb9658.svg";
+			case /(?:^|\.)reddit\.com$/.test(hostname):
+				return "/assets/adfd927dcc2049a5.svg";
+			case /(?:^|\.)steamcommunity\.com$/.test(hostname):
+				return "/assets/1f7ec18f3695d4cf.svg";
+			case /(?:^|\.)battle\.net$/.test(hostname):
+				return "/assets/163c8cb9220efc74.svg";
+			default:
+				return "";
+		}
 	} catch (e) {
-	  return "";
+		return "";
 	}
 }
 function Connections({
@@ -553,7 +553,7 @@ function Connections({
 			<div className="connectedAccountContainer_e6abe8" key={account.id}>
 				<div className="connectedAccount_e6abe8">
 					<img
-						alt="Wesbite Logo" 
+						alt="Wesbite Logo"
 						className="connectedAccountIcon_e6abe8"
 						src={getIconSrcFromUrl(account.profileUrl!)}
 					/>

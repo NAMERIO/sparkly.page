@@ -32,7 +32,7 @@ const zUserDataRequest = z
 	.object({
 		displayName: z.string().min(1).max(20),
 		description: z.string(),
-		status: z.enum(["online", "idle", "dnd", "offline"]), 
+		status: z.enum(["online", "idle", "dnd", "offline"]),
 		links: z.array(z.any()),
 		roles: z.array(z.any()),
 	})

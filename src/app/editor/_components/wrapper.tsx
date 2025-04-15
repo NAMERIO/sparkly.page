@@ -1,6 +1,5 @@
 "use client";
 
-import { UserCard } from "@/components/user-card";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -11,6 +10,7 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { UserCard } from "@/components/user-card";
 import type { UsersTableSelect } from "@/db/schema";
 import { discordStatus } from "@/helpers/default-discord-user";
 import { cn, generateId, minDelay } from "@/lib/utils";
@@ -20,11 +20,14 @@ import { ArrowUpRightIcon, LoaderIcon, PlusIcon, XIcon } from "lucide-react";
 import { Fragment, useCallback, useRef, useState } from "react";
 import { HexColorPicker } from "react-colorful";
 
-import {useClickOutside} from "@/hooks/useClickOutside";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
-export const PopoverPicker = ({ color, onChange }: {
-	color: string,
-	onChange: (color: string) => void
+export const PopoverPicker = ({
+	color,
+	onChange,
+}: {
+	color: string;
+	onChange: (color: string) => void;
 }) => {
 	const popover = useRef<HTMLDivElement>(null);
 	const [isOpen, toggle] = useState(false);
@@ -193,9 +196,7 @@ export function Wrapper({ user }: { user: UsersTableSelect }) {
 							name="status"
 							children={(field) => (
 								<div>
-									<label
-										className="mb-2 inline-block font-seminbold"
-									>
+									<label className="mb-2 inline-block font-seminbold">
 										Status
 									</label>
 									<Select
@@ -223,7 +224,11 @@ export function Wrapper({ user }: { user: UsersTableSelect }) {
 															<svg>
 																<rect
 																	className="pointerEvents__44b0c"
-																	fill={discordStatus[key as keyof typeof discordStatus]!.color}
+																	fill={
+																		discordStatus[
+																			key as keyof typeof discordStatus
+																		]!.color
+																	}
 																	mask={`url(#svg-mask-status-${key})`}
 																	width="90%"
 																	height="90%"
