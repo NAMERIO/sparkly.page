@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 
-const baseUrl = process.env.VERCEL_URL ?? "http://localhost:3000";
+const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
 
 export const discord = new Discord(
 	process.env.DISCORD_CLIENT_ID!,
