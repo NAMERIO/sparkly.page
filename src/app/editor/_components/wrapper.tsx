@@ -97,7 +97,6 @@ export function Wrapper({ user }: { user: UsersTableSelect }) {
 	});
 
 	const store = useStore(form.store, (state) => ({ ...state.values }));
-	console.log({ store });
 	return (
 		<div className="font-hanken-grotesk grid lg:grid-cols-2 gap-2">
 			<div className="flex-1 px-2">

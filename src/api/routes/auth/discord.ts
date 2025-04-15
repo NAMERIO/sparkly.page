@@ -70,8 +70,6 @@ DiscordRouter.get("/callback", async (c) => {
 			username,
 		} = respnose;
 
-		console.log({ respnose})
-
 		const existingUser = await db.query.usersTable.findFirst({
 			where: eq(usersTable.id, id),
 			columns: {
