@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 import type { RESTGetAPICurrentUserResult } from 'discord-api-types/v10';
-const baseUrl = process.env.URL ? `https://${process.env.URL}` : "http://localhost:3000";
+const baseUrl = process.env.URL ?? "http://localhost:3000";
 
 export const discord = new Discord(
 	process.env.DISCORD_CLIENT_ID!,
