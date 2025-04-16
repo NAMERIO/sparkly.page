@@ -1,5 +1,5 @@
 import type { UserRole } from "@/components/discord-card/roles";
-import type { Link } from "@/components/user-card";
+import type { DiscordLink } from "@/components/user-card";
 import { discordStatus } from "@/helpers/default-discord-user";
 import { json, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
@@ -37,27 +37,14 @@ export const usersTable = pgTable("user", {
 		.default([
 			{
 				id: "1279788469752696883",
-				name: "Survevrs (level 5)",
+				name: "such name such wow",
 				color: "rgb(221, 180, 16)",
-				icon: "https://cdn.discordapp.com/role-icons/1279788469752696883/ff9f5b60d851aa50fc0e6e72cfce57da.webp?size=20&quality=lossless",
-			},
-			{
-				id: "1306918227925794897",
-				name: "Community Membrs",
-				color: "rgb(196, 201, 206)",
-				icon: undefined,
 			},
 		]),
 	links: json("links")
 		.notNull()
-		.$type<Link[]>()
+		.$type<DiscordLink[]>()
 		.default([
-			{
-				id: "1",
-				name: "jrdsctt#1859",
-				iconSrc: "/assets/163c8cb9220efc74.svg",
-				profileUrl: null,
-			},
 			{
 				id: "2",
 				name: "Jarid Scott Waniger",

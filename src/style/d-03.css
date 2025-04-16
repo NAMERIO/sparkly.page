@@ -55906,68 +55906,68 @@ html.disable-forced-colors * {
 
 :root {
     --font-headline: "ABC Ginto Nord","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-body: Fraunces,"gg sans",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-signature: Corinthia,"gg sans",cursive,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing: "ABC Ginto Discord","gg sans",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord","gg sans",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    --font-clan-body: Fraunces,"Hanken Grotesk",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-clan-signature: Corinthia,"Hanken Grotesk",cursive,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing: "ABC Ginto Discord","Hanken Grotesk",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord","Hanken Grotesk",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 :root,:root:lang(bg),:root:lang(el),:root:lang(ru),:root:lang(uk) {
-    --font-primary: "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display: "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-primary: "Hanken Grotesk","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display: "Hanken Grotesk","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-code: "gg mono","Source Code Pro",Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace
 }
 
 :root:lang(bg),:root:lang(el),:root:lang(ru),:root:lang(uk) {
     --font-headline: "Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-body: Fraunces,"gg sans",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-signature: Corinthia,"gg sans",cursive,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing: "ABC Ginto Discord","gg sans",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord","gg sans",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    --font-clan-body: Fraunces,"Hanken Grotesk",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-clan-signature: Corinthia,"Hanken Grotesk",cursive,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing: "ABC Ginto Discord","Hanken Grotesk",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord","Hanken Grotesk",serif,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 :root:lang(ko) {
-    --font-primary: "gg sans","Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display: "gg sans","Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-primary: "Hanken Grotesk","Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display: "Hanken Grotesk","Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-headline: "ABC Ginto Nord","Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-code: "gg mono","Source Code Pro",Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    --font-clan-body: Fraunces,"gg sans",serif,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-signature: Corinthia,"gg sans",cursive,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing: "ABC Ginto Discord","gg sans",serif,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord","gg sans",serif,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    --font-clan-body: Fraunces,"Hanken Grotesk",serif,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-clan-signature: Corinthia,"Hanken Grotesk",cursive,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing: "ABC Ginto Discord","Hanken Grotesk",serif,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord","Hanken Grotesk",serif,"Apple SD Gothic Neo",NanumBarunGothic,"ë§‘ì€ ê³ ë”•","Malgun Gothic",Gulim,êµ´ë¦¼,Dotum,ë‹ì›€,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 :root:lang(ja) {
-    --font-primary: "gg sans","Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display: "gg sans","Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-primary: "Hanken Grotesk","Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display: "Hanken Grotesk","Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-headline: "ABC Ginto Nord","Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-code: "gg mono","Source Code Pro",Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    --font-clan-body: Fraunces,"gg sans",serif,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-signature: Corinthia,"gg sans",cursive,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing: "ABC Ginto Discord","gg sans",serif,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord","gg sans",serif,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    --font-clan-body: Fraunces,"Hanken Grotesk",serif,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-clan-signature: Corinthia,"Hanken Grotesk",cursive,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing: "ABC Ginto Discord","Hanken Grotesk",serif,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord","Hanken Grotesk",serif,"Hiragino Sans","ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3","Hiragino Kaku Gothic ProN",ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,Osaka,"MS PGothic","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 :root:lang(zh-CN) {
-    --font-primary: "gg sans","Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display: "gg sans","Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-primary: "Hanken Grotesk","Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display: "Hanken Grotesk","Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-headline: "ABC Ginto Nord","Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-code: "gg mono","Source Code Pro",Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    --font-clan-body: Fraunces,"gg sans",serif,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-signature: Corinthia,"gg sans",cursive,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing: "ABC Ginto Discord","gg sans",serif,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord","gg sans",serif,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    --font-clan-body: Fraunces,"Hanken Grotesk",serif,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-clan-signature: Corinthia,"Hanken Grotesk",cursive,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing: "ABC Ginto Discord","Hanken Grotesk",serif,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord","Hanken Grotesk",serif,"Microsoft YaHei New",å¾®è½¯é›…é»‘,"Microsoft Yahei","Microsoft JhengHei",å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 :root:lang(zh-TW) {
-    --font-primary: "gg sans","Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display: "gg sans","Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-primary: "Hanken Grotesk","Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display: "Hanken Grotesk","Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-headline: "ABC Ginto Nord","Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     --font-code: "gg mono","Source Code Pro",Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    --font-clan-body: Fraunces,"gg sans",serif,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-clan-signature: Corinthia,"gg sans",cursive,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing: "ABC Ginto Discord","gg sans",serif,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --font-display-marketing-header: "ABC Ginto Nord Discord","gg sans",serif,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+    --font-clan-body: Fraunces,"Hanken Grotesk",serif,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-clan-signature: Corinthia,"Hanken Grotesk",cursive,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing: "ABC Ginto Discord","Hanken Grotesk",serif,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord","Hanken Grotesk",serif,"Microsoft JhengHei",å¾®è»Ÿæ­£é»‘é«”,"Microsoft JhengHei UI","Microsoft YaHei",å¾®è»Ÿé›…é»‘,å®‹ä½“,SimSun,"Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 :root {

@@ -18,6 +18,20 @@ export function Roles({ roles }: { roles: UserRole[] }) {
 	if (!roles) return;
 
 	return (
+		<section className="section_bf424d">
+		<div className="headings_bf424d">
+			<div className="header_bf424d">
+				<h1
+					className="text-xs/semibold_cf4812 defaultColor__5345c"
+					data-text-variant="text-xs/semibold"
+					style={{
+						color: "var(--header-secondary)",
+					}}
+				>
+					Roles
+				</h1>
+			</div>
+		</div>
 		<div
 			aria-label="Roles"
 			className="root_fccfdf"
@@ -84,5 +98,7 @@ export function Roles({ roles }: { roles: UserRole[] }) {
 
 			<span style={{ display: "none" }} />
 		</div>
+	</section>
+
 	);
 }

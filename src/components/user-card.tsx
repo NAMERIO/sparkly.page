@@ -317,22 +317,7 @@ export function UserCard({
 													<span>{user.description}</span>
 												</div>
 											</div>
-											<section className="section_bf424d">
-												<div className="headings_bf424d">
-													<div className="header_bf424d">
-														<h1
-															className="text-xs/semibold_cf4812 defaultColor__5345c"
-															data-text-variant="text-xs/semibold"
-															style={{
-																color: "var(--header-secondary)",
-															}}
-														>
-															Roles
-														</h1>
-													</div>
-												</div>
-												<Roles roles={user.roles} />
-											</section>
+											<Roles roles={user.roles} />
 											<section className="section_bf424d">
 												<div className="headings_bf424d">
 													<div className="header_bf424d">
@@ -403,22 +388,7 @@ export function UserCard({
 	  </div>   */}
 												</div>
 											</section>
-											<section className="section_bf424d">
-												<div className="headings_bf424d">
-													<div className="header_bf424d">
-														<h1
-															className="text-xs/semibold_cf4812 defaultColor__5345c"
-															data-text-variant="text-xs/semibold"
-															style={{
-																color: "var(--header-secondary)",
-															}}
-														>
-															Connections
-														</h1>
-													</div>
-												</div>
-												<Connections links={user.links} />
-											</section>
+											<Connections links={user.links} />
 											<section className="section_bf424d">
 												<div className="headings_bf424d">
 													<div className="header_bf424d">
@@ -508,7 +478,7 @@ function ThinkingText({
 		</div>
 	);
 }
-interface DiscordLink {
+export interface DiscordLink {
 	id: string;
 	name: string;
 	iconSrc: string;
@@ -547,6 +517,8 @@ function Connections({
 }: {
 	links: DiscordLink[];
 }) {
+	if ( !links.length ) return null;
+
 	const midpoint = Math.ceil(links.length / 2);
 	const firstColumnAccounts = links.slice(0, midpoint);
 	const secondColumnAccounts = links.slice(midpoint);
@@ -670,6 +642,20 @@ function Connections({
 	};
 
 	return (
+		<section className="section_bf424d">
+		<div className="headings_bf424d">
+			<div className="header_bf424d">
+				<h1
+					className="text-xs/semibold_cf4812 defaultColor__5345c"
+					data-text-variant="text-xs/semibold"
+					style={{
+						color: "var(--header-secondary)",
+					}}
+				>
+					Connections
+				</h1>
+			</div>
+		</div>
 		<div className="connectedAccounts_e6abe8 connections_fcb628">
 			<div className="connectedAccountsColumn_e6abe8">
 				{firstColumnAccounts.map(renderAccount)}
@@ -678,5 +664,7 @@ function Connections({
 				{secondColumnAccounts.map(renderAccount)}
 			</div>
 		</div>
+	</section>
+
 	);
 }
