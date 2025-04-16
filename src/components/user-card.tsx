@@ -516,7 +516,6 @@ export interface Link {
 export function getIconSrcFromUrl(url: string | null) {
 	if (!url) return "";
 
-	// URL parsing approach using URL constructor for more accurate domain extraction
 	try {
 		const urlObj = new URL(url);
 		const hostname = urlObj.hostname;
@@ -532,6 +531,8 @@ export function getIconSrcFromUrl(url: string | null) {
 				return "/assets/1f7ec18f3695d4cf.svg";
 			case /(?:^|\.)battle\.net$/.test(hostname):
 				return "/assets/163c8cb9220efc74.svg";
+			case /(?:^|\.)instagram\.com$/.test(hostname):
+				return "/assets/c05dded52023ed43.svg";
 			default:
 				return "";
 		}
