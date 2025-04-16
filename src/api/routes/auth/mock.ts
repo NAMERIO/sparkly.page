@@ -3,12 +3,14 @@ import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { db } from "../../../db";
 import { usersTable } from "../../../db/schema";
+import { Config } from "@/config";
 
 export const MockRouter = new Hono();
 
 export const MOCK_USER_ID = "MOCK_USER_ID";
 
 MockRouter.get("/", async (c) => {
+	if ( !Config.mockAuthEnabled ) return c.json({ error: "Mock Auth Disabled"}, 401);
 	try {
 		const existingUser = await db.query.usersTable.findFirst({
 			where: eq(usersTable.id, MOCK_USER_ID),
