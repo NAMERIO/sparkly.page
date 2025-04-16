@@ -5,7 +5,7 @@ import { Discord, OAuth2RequestError, generateState } from "arctic";
 import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
-
+import type { RESTGetAPICurrentUserResult } from 'discord-api-types/v10';
 const baseUrl = process.env.URL ? `https://${process.env.URL}` : "http://localhost:3000";
 
 export const discord = new Discord(
@@ -60,12 +60,15 @@ DiscordRouter.get("/callback", async (c) => {
 			},
 		);
 
-		const respnose: {
-			username: string;
-			id: string;
-		} = await discordUserResponse.json();
-
-		const { id, username } = respnose;
+		const respnose: RESTGetAPICurrentUserResult = await discordUserResponse.json();
+		
+		const {
+			id,
+			username,
+			global_name: displayName,
+			avatar,
+			banner: bannedColor,
+		} = respnose;
 
 		const existingUser = await db.query.usersTable.findFirst({
 			where: eq(usersTable.id, id),
@@ -79,7 +82,13 @@ DiscordRouter.get("/callback", async (c) => {
 			return c.redirect("/");
 		}
 
-		await db.insert(usersTable).values({ id, username, displayName: username });
+		await db.insert(usersTable).values({
+			id,
+			username,
+			displayName: displayName ?? "",
+			avatar: avatar ?? "",
+			bannedColor: bannedColor ?? ""
+		 });
 
 		await setSessionTokenCookie(id, c);
 		return c.redirect("/");

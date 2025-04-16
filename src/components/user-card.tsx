@@ -1,6 +1,8 @@
 import { SvgMasks } from "@/components/svg-masks";
 import type { UsersTableSelect } from "@/db/schema";
 import { discordStatus } from "@/helpers/default-discord-user";
+import { getDiscordAvatar } from "@/lib/utils";
+import { Link } from "lucide-react";
 import { Roles } from "./discord-card/roles";
 
 export function UserCard({
@@ -119,7 +121,7 @@ export function UserCard({
 																alt=" "
 																aria-hidden="true"
 																className="avatar__44b0c"
-																src={user.avatar}
+																src={getDiscordAvatar(user.id, user.avatar)}
 															/>
 														</div>
 													</foreignObject>
@@ -506,7 +508,7 @@ function ThinkingText({
 		</div>
 	);
 }
-export interface Link {
+interface DiscordLink {
 	id: string;
 	name: string;
 	iconSrc: string;
@@ -543,21 +545,27 @@ export function getIconSrcFromUrl(url: string | null) {
 function Connections({
 	links,
 }: {
-	links: Link[];
+	links: DiscordLink[];
 }) {
 	const midpoint = Math.ceil(links.length / 2);
 	const firstColumnAccounts = links.slice(0, midpoint);
 	const secondColumnAccounts = links.slice(midpoint);
 
-	const renderAccount = (account: Link) => {
+	const renderAccount = (account: DiscordLink) => {
+		const iconUrl = getIconSrcFromUrl(account.profileUrl!)
 		return (
 			<div className="connectedAccountContainer_e6abe8" key={account.id}>
 				<div className="connectedAccount_e6abe8">
-					<img
+					{
+						iconUrl ?
+						<img
 						alt="Wesbite Logo"
 						className="connectedAccountIcon_e6abe8"
-						src={getIconSrcFromUrl(account.profileUrl!)}
-					/>
+						src={iconUrl}
+						/> : <div className="size-[24px] flex items-center justify-center">
+							<Link className="size-4" />
+							</div>
+					}
 					<span
 						style={{
 							display: "none",
