@@ -102,7 +102,7 @@ export function Wrapper({ user }: { user: UsersTableSelect }) {
 	const store = useStore(form.store, (state) => ({ ...state.values }));
 	return (
 		<div className="font-hanken-grotesk grid lg:grid-cols-2 gap-2">
-			<div className="flex-1 px-2 w-full max-w-md mx-auto"> 
+			<div className="flex-1 px-2 w-full max-w-[600px] mx-auto"> 
 				<div className="flex items-center justify-between mb-6">
 					<h2 className="text-lg font-semibold md:text-2xl text-(--text-normal)">
 						Edit

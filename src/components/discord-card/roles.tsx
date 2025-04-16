@@ -11,11 +11,13 @@ export type UserRole = {
 
 export function Roles({ roles }: { roles: UserRole[] }) {
 	const [showAllRoles, setShowAllRoles] = useState(false);
+
+	if (!roles.length) return;
+
 	const getMaxWidth = ({ icon }: UserRole) => (icon ? "268px" : "236.125px");
 	const visibleRoles = [...roles].slice(0, 3);
 	const hiddenRolesCount = roles.length - visibleRoles.length;
 
-	if (!roles) return;
 
 	return (
 		<section className="section_bf424d">

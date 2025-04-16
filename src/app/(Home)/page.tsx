@@ -2,6 +2,12 @@ import { ReactQueryProvider } from "@/providers/react-query";
 import UsernameCheckCard from "./_components/UsernameCheckCard";
 import { Navbar } from "@/components/navbar";
 import { validateRequest } from "@/lib/auth";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "sparkly.page ✨",
+	description: "Your discord profile card is unique, share it with the world!",
+};
 
 export default async function Home() {
 	const user  = await validateRequest();
