@@ -6,7 +6,6 @@ import UsernameCheckCard from "./_components/UsernameCheckCard";
 import { Config } from "@/config";
 
 export default async function Home() {
-	// return <UserCard />;
 	const { isAuthenticated } = await validateRequest();
 	return (
 		<>
