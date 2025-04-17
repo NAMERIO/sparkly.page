@@ -6,6 +6,7 @@ import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 import type { RESTGetAPICurrentUserResult } from 'discord-api-types/v10';
+
 const baseUrl = process.env.URL ?? "http://localhost:3000";
 
 export const discord = new Discord(
@@ -79,7 +80,7 @@ DiscordRouter.get("/callback", async (c) => {
 
 		if (existingUser) {
 			await setSessionTokenCookie(existingUser.id, c);
-			return c.redirect("/");
+			return c.redirect("/editor");
 		}
 
 		await db.insert(usersTable).values({
@@ -91,7 +92,7 @@ DiscordRouter.get("/callback", async (c) => {
 		 });
 
 		await setSessionTokenCookie(id, c);
-		return c.redirect("/");
+		return c.redirect("/editor");
 	} catch (err) {
 		console.warn("/api/auth/discord: Failed to create user", err);
 		if (

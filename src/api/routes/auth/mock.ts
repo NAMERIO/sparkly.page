@@ -21,7 +21,7 @@ MockRouter.get("/", async (c) => {
 
 		if (existingUser) {
 			await setSessionTokenCookie(existingUser.id, c);
-			return c.redirect("/");
+			return c.redirect("/editor");
 		}
 
 		await db.insert(usersTable).values({
@@ -31,7 +31,7 @@ MockRouter.get("/", async (c) => {
 		});
 
 		await setSessionTokenCookie(MOCK_USER_ID, c);
-		return c.redirect("/");
+		return c.redirect("/editor");
 	} catch (err) {
 		console.warn("/api/auth/mock: Failed to create user", err);
 		return c.json({}, 500);
