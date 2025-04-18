@@ -262,14 +262,7 @@ export function UserCard({
 															className="defaultColor__4bd52 text-sm/normal_cf4812"
 															data-text-variant="text-sm/normal"
 														>
-															{new Date(user.createdAt).toLocaleDateString(
-																"en-US",
-																{
-																	year: "numeric",
-																	month: "short",
-																	day: "numeric",
-																},
-															)}
+															{ getCreationDateFromSnowflake(user.id) }
 														</div>
 													</div>
 													{/* <div className="divider_c4eb81" />
@@ -575,5 +568,25 @@ function Connections({
 				</div>
 			</div>
 		</section>
+	);
+}
+
+function getCreationDateFromSnowflake(snowflake: string): string {
+	// Discord epoch: January 1, 2015 (in milliseconds)
+	const discordEpoch = 1420070400000;
+
+	// Shift right 22 bits to get the timestamp
+	const binary = BigInt(snowflake) >> 22n;
+
+	// Add the Discord epoch
+	const timestamp = Number(binary) + discordEpoch;
+
+	return new Date(timestamp).toLocaleDateString(
+		"en-US",
+		{
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		}
 	);
 }
