@@ -154,8 +154,7 @@ export function UserCard({
 											display: "none",
 										}}
 									/>
-									<div className="headerButtons__24502">
-									</div>
+									<div className="headerButtons__24502"></div>
 								</div>
 							</header>
 							<div className="body__24502">
@@ -263,7 +262,14 @@ export function UserCard({
 															className="defaultColor__4bd52 text-sm/normal_cf4812"
 															data-text-variant="text-sm/normal"
 														>
-															{new Date(user.createdAt).toLocaleDateString()}
+															{new Date(user.createdAt).toLocaleDateString(
+																"en-US",
+																{
+																	year: "numeric",
+																	month: "short",
+																	day: "numeric",
+																},
+															)}
 														</div>
 													</div>
 													{/* <div className="divider_c4eb81" />
