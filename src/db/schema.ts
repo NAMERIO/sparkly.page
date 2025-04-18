@@ -24,7 +24,9 @@ export const usersTable = pgTable("user", {
 	username: text("username").notNull(),
 	displayName: text("display_name").notNull(),
 	createdAt: timestamp("created_at").notNull().defaultNow(),
-	description: text("description").notNull().default(""),
+	description: text("description")
+		.notNull()
+		.default("such description such wow"),
 	status: text("status", {
 		enum: [...Object.keys(discordStatus)] as [keyof typeof discordStatus],
 	})
@@ -37,7 +39,7 @@ export const usersTable = pgTable("user", {
 		.default([
 			{
 				id: "1279788469752696883",
-				name: "such name such wow",
+				name: "such role such wow",
 				color: "rgb(221, 180, 16)",
 			},
 		]),
@@ -47,9 +49,9 @@ export const usersTable = pgTable("user", {
 		.default([
 			{
 				id: "2",
-				name: "Jarid Scott Waniger",
+				name: "such link such wow",
 				iconSrc: "/assets/d5719388ffc613da.svg",
-				profileUrl: "https://open.spotify.com/user/jrdsctt",
+				profileUrl: "https://open.spotify.com/",
 			},
 		]),
 	bannedColor: text("banned_color").notNull().default("#4b8b8b"),

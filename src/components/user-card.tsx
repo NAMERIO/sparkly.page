@@ -148,74 +148,13 @@ export function UserCard({
 											display: "none",
 										}}
 									/>
-									<ThinkingText text={"so what?"} />
+									{/* <ThinkingText text={"so what?"} /> */}
 									<span
 										style={{
 											display: "none",
 										}}
 									/>
 									<div className="headerButtons__24502">
-										<div className="multipleButtons_ea99c4">
-											<div>
-												<button
-													aria-label="Message"
-													className="button_fb7f94 icon_fb7f94 button__201d5 lookFilled__201d5 colorPrimary__201d5 themeColor_fb7f94 primary_fb7f94"
-													type="button"
-												>
-													<div className="contents__201d5 buttonInner_fb7f94 icon_fb7f94">
-														<svg
-															aria-hidden="true"
-															fill="none"
-															height="16"
-															role="img"
-															viewBox="0 0 24 24"
-															width="16"
-															xmlns="http://www.w3.org/2000/svg"
-														>
-															<path
-																className=""
-																d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"
-																fill="currentColor"
-															/>
-														</svg>
-													</div>
-												</button>
-											</div>
-											<span
-												style={{
-													display: "none",
-												}}
-											/>
-											<button
-												aria-label="Add Friend"
-												className="button_fb7f94 button__201d5 lookFilled__201d5 colorBrand__201d5 themeColor_fb7f94 primary_fb7f94 sizeSmall__201d5 grow__201d5"
-												type="button"
-											>
-												<div className="contents__201d5 buttonInner_fb7f94">
-													<svg
-														aria-hidden="true"
-														fill="none"
-														height="16"
-														role="img"
-														viewBox="0 0 24 24"
-														width="16"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															className=""
-															d="M19 14a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z"
-															fill="currentColor"
-														/>
-														<path
-															className=""
-															d="M16.83 12.93c.26-.27.26-.75-.08-.92A9.5 9.5 0 0 0 12.47 11h-.94A9.53 9.53 0 0 0 2 20.53c0 .81.66 1.47 1.47 1.47h.22c.24 0 .44-.17.5-.4.29-1.12.84-2.17 1.32-2.91.14-.21.43-.1.4.15l-.26 2.61c-.02.3.2.55.5.55h7.64c.12 0 .17-.31.06-.36C12.82 21.14 12 20.22 12 19a3 3 0 0 1 3-3h.5a.5.5 0 0 0 .5-.5V15c0-.8.31-1.53.83-2.07ZM12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
-															fill="currentColor"
-														/>
-													</svg>
-													Add Friend
-												</div>
-											</button>
-										</div>
 									</div>
 								</div>
 							</header>
@@ -228,42 +167,6 @@ export function UserCard({
 										>
 											{user.displayName}
 										</h1>
-										<div className="nicknameIcons__63ed3 fullSize__63ed3">
-											<div
-												aria-label="Unable to load profile banner, badges, and about me."
-												className="container__23ba6"
-											>
-												<svg
-													aria-hidden="true"
-													fill="none"
-													height="16"
-													role="img"
-													viewBox="0 0 24 24"
-													width="16"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<circle
-														className=""
-														cx="12"
-														cy="12"
-														fill="transparent"
-														r="10"
-													/>
-													<path
-														className=""
-														clipRule="evenodd"
-														d="M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm1.44-15.94L13.06 14a1.06 1.06 0 0 1-2.12 0l-.38-6.94a1 1 0 0 1 1-1.06h.88a1 1 0 0 1 1 1.06Zm-.19 10.69a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
-														fill="var(--status-warning)"
-														fillRule="evenodd"
-													/>
-												</svg>
-											</div>
-											<span
-												style={{
-													display: "none",
-												}}
-											/>
-										</div>
 									</div>
 									<div className="tags__63ed3 fullSize__63ed3">
 										<div className="info_f4bc97 userTag__63ed3">
@@ -517,27 +420,28 @@ function Connections({
 }: {
 	links: DiscordLink[];
 }) {
-	if ( !links.length ) return null;
+	if (!links.length) return null;
 
 	const midpoint = Math.ceil(links.length / 2);
 	const firstColumnAccounts = links.slice(0, midpoint);
 	const secondColumnAccounts = links.slice(midpoint);
 
 	const renderAccount = (account: DiscordLink) => {
-		const iconUrl = getIconSrcFromUrl(account.profileUrl!)
+		const iconUrl = getIconSrcFromUrl(account.profileUrl!);
 		return (
 			<div className="connectedAccountContainer_e6abe8" key={account.id}>
 				<div className="connectedAccount_e6abe8">
-					{
-						iconUrl ?
+					{iconUrl ? (
 						<img
-						alt="Wesbite Logo"
-						className="connectedAccountIcon_e6abe8"
-						src={iconUrl}
-						/> : <div className="size-[24px] flex items-center justify-center">
+							alt="Wesbite Logo"
+							className="connectedAccountIcon_e6abe8"
+							src={iconUrl}
+						/>
+					) : (
+						<div className="size-[24px] flex items-center justify-center">
 							<Link className="size-4" />
-							</div>
-					}
+						</div>
+					)}
 					<span
 						style={{
 							display: "none",
@@ -643,28 +547,27 @@ function Connections({
 
 	return (
 		<section className="section_bf424d">
-		<div className="headings_bf424d">
-			<div className="header_bf424d">
-				<h1
-					className="text-xs/semibold_cf4812 defaultColor__5345c"
-					data-text-variant="text-xs/semibold"
-					style={{
-						color: "var(--header-secondary)",
-					}}
-				>
-					Connections
-				</h1>
+			<div className="headings_bf424d">
+				<div className="header_bf424d">
+					<h1
+						className="text-xs/semibold_cf4812 defaultColor__5345c"
+						data-text-variant="text-xs/semibold"
+						style={{
+							color: "var(--header-secondary)",
+						}}
+					>
+						Connections
+					</h1>
+				</div>
 			</div>
-		</div>
-		<div className="connectedAccounts_e6abe8 connections_fcb628">
-			<div className="connectedAccountsColumn_e6abe8">
-				{firstColumnAccounts.map(renderAccount)}
+			<div className="connectedAccounts_e6abe8 connections_fcb628">
+				<div className="connectedAccountsColumn_e6abe8">
+					{firstColumnAccounts.map(renderAccount)}
+				</div>
+				<div className="connectedAccountsColumn_e6abe8">
+					{secondColumnAccounts.map(renderAccount)}
+				</div>
 			</div>
-			<div className="connectedAccountsColumn_e6abe8">
-				{secondColumnAccounts.map(renderAccount)}
-			</div>
-		</div>
-	</section>
-
+		</section>
 	);
 }

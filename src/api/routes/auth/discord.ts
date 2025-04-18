@@ -2,10 +2,10 @@ import { db } from "@/db";
 import { usersTable } from "@/db/schema";
 import { setSessionTokenCookie } from "@/lib/auth";
 import { Discord, OAuth2RequestError, generateState } from "arctic";
+import type { RESTGetAPICurrentUserResult } from "discord-api-types/v10";
 import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
-import type { RESTGetAPICurrentUserResult } from 'discord-api-types/v10';
 
 const baseUrl = process.env.URL ?? "http://localhost:3000";
 
@@ -61,8 +61,9 @@ DiscordRouter.get("/callback", async (c) => {
 			},
 		);
 
-		const respnose: RESTGetAPICurrentUserResult = await discordUserResponse.json();
-		
+		const respnose: RESTGetAPICurrentUserResult =
+			await discordUserResponse.json();
+
 		const {
 			id,
 			username,
@@ -88,8 +89,8 @@ DiscordRouter.get("/callback", async (c) => {
 			username,
 			displayName: displayName ?? "",
 			avatar: avatar ?? "",
-			bannedColor: bannedColor ?? ""
-		 });
+			bannedColor: bannedColor ?? "",
+		});
 
 		await setSessionTokenCookie(id, c);
 		return c.redirect("/editor");

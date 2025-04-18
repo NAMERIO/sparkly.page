@@ -1,0 +1,3 @@
+ALTER TABLE "user" ALTER COLUMN "description" SET DEFAULT 'such description such wow';--> statement-breakpoint
+ALTER TABLE "user" ALTER COLUMN "roles" SET DEFAULT '[{"id":"1279788469752696883","name":"such role such wow","color":"rgb(221, 180, 16)"}]'::json;--> statement-breakpoint
+ALTER TABLE "user" ALTER COLUMN "links" SET DEFAULT '[{"id":"2","name":"such link such wow","iconSrc":"/assets/d5719388ffc613da.svg","profileUrl":"https://open.spotify.com/"}]'::json;

@@ -1,8 +1,8 @@
-import { ReactQueryProvider } from "@/providers/react-query";
-import UsernameCheckCard from "./_components/UsernameCheckCard";
 import { Navbar } from "@/components/navbar";
 import { validateRequest } from "@/lib/auth";
+import { ReactQueryProvider } from "@/providers/react-query";
 import type { Metadata } from "next";
+import UsernameCheckCard from "./_components/UsernameCheckCard";
 
 export const metadata: Metadata = {
 	title: "sparkly.page ✨",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-	const user  = await validateRequest();
+	const user = await validateRequest();
 
 	return (
 		<>

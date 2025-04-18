@@ -5,6 +5,6 @@ export default defineConfig({
 	schema: "src/db/schema.ts",
 	out: "./src/db/drizzle",
 	dbCredentials: {
-		url: process.env.DATABASE_URL!,
+		url: "postgresql://cordpage_owner:npg_0hrLDkACUOM4@ep-weathered-wildflower-a5cyimnr-pooler.us-east-2.aws.neon.tech/cordpage?sslmode=require"!,
 	},
 });

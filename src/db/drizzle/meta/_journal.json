@@ -8,6 +8,13 @@
 			"when": 1744472611038,
 			"tag": "0000_perfect_lenny_balinger",
 			"breakpoints": true
+		},
+		{
+			"idx": 1,
+			"version": "7",
+			"when": 1744917579950,
+			"tag": "0001_outgoing_nightshade",
+			"breakpoints": true
 		}
 	]
 }

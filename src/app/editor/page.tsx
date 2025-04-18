@@ -1,8 +1,8 @@
-import { validateRequest } from "@/lib/auth";
-import { Wrapper } from "./_components/wrapper";
 import { Navbar } from "@/components/navbar";
-import { redirect } from "next/navigation";
+import { validateRequest } from "@/lib/auth";
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
+import { Wrapper } from "./_components/wrapper";
 
 export const metadata: Metadata = {
 	title: "editor ✨",
@@ -15,10 +15,12 @@ export default async function Page() {
 		redirect("/");
 	}
 
-	return <>
-	<div>
-		<Navbar user={user} />
-	</div>
-	<Wrapper user={user.user!} />
-	</>;
+	return (
+		<>
+			<div>
+				<Navbar user={user} />
+			</div>
+			<Wrapper user={user.user!} />
+		</>
+	);
 }
