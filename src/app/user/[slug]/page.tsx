@@ -1,6 +1,8 @@
+import { buttonVariants } from "@/components/ui/button";
 import { UserCard } from "@/components/user-card";
 import { db } from "@/db";
 import { usersTable } from "@/db/schema";
+import { cn } from "@/lib/utils";
 import { eq } from "drizzle-orm";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -55,7 +57,14 @@ export default async function Page({ params }: Props) {
 
 	return (
 		<div>
-			<UserCard user={data} />
+  		<div className="py-10">
+  			<UserCard user={data} />
+  		</div>
+      <div className="pb-10 flex justify-center">
+        <a href={`/api/create_your_own_page?userId=${data.id}`} className={cn("text-white!", buttonVariants({ variant: "discord_muted", size: 'sm' }) )}>
+  			 create your own ✨ sparkly.page
+  			</a>
+      </div>
 		</div>
 	);
 }
