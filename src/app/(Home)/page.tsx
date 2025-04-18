@@ -22,9 +22,9 @@ export default async function Home() {
 						<br />
 						share it with the world!
 					</h1>
-					<ReactQueryProvider>
+					{/* <ReactQueryProvider>
 						<UsernameCheckCard />
-					</ReactQueryProvider>
+					 </ReactQueryProvider> */}
 				</div>
 			</header>
 		</>
