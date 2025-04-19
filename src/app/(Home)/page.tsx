@@ -9,7 +9,7 @@ import { validateRequest } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-	title: "sparkly.page ✨",
+	title: "sparkly.page",
 	description: "Your discord profile card is unique, share it with the world!",
 };
 

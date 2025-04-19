@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { Wrapper } from "./_components/wrapper";
 
 export const metadata: Metadata = {
-	title: "editor ✨",
+	title: "editor",
 };
 
 export default async function Page() {
