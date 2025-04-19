@@ -9,7 +9,7 @@ export function EditorButton() {
 	const path = usePathname();
 	if (path === "/editor") return null;
 	return (
-		<Link href="/editor" className={cn(dicsordButtonVariants())}>
+		<Link href="/editor" className={cn(dicsordButtonVariants(), "font-hanken-grotesk")}>
 			Editor
 		</Link>
 	);

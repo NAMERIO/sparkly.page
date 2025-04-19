@@ -75,9 +75,9 @@ export const editForm = ({
 							validators={{
 								onChange: ({ value }) =>
 									!value
-										? "A first name is required"
+										? "A display name is required"
 										: value.length < 3
-											? "First name must be at least 3 characters"
+											? "Display name must be at least 3 characters"
 											: undefined,
 							}}
 							children={(field) => {

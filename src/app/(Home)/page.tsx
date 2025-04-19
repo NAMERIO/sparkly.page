@@ -5,6 +5,8 @@ import { ReactQueryProvider } from "@/providers/react-query";
 import type { Metadata } from "next";
 import { Wrapper } from "../editor/_components/wrapper";
 import UsernameCheckCard from "./_components/UsernameCheckCard";
+import { validateRequest } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
 	title: "sparkly.page ✨",
@@ -15,20 +17,37 @@ const MOCK_USER = {
 	avatar: "",
 	bannedColor: "",
 	createdAt: new Date(),
-	description: "",
-	displayName: "something",
+	description: "such description such wow",
+	displayName: "user#0001",
 	id: "10000000",
-	links: [],
-	roles: [],
+	links: [
+		{
+			id: "2",
+			name: "such link such wow",
+			iconSrc: "/assets/d5719388ffc613da.svg",
+			profileUrl: "https://open.spotify.com/",
+		},
+	],
+	roles: [
+	{
+		id: "1279788469752696883",
+		name: "such role such wow",
+		color: "rgb(221, 180, 16)",
+	},
+	],
 	status: "online",
 	username: "something",
-} satisfies UsersTableSelect;
+} as UsersTableSelect;
 
 export default async function Home() {
+  const user = await validateRequest();
+  if ( user.isAuthenticated) {
+    return redirect("/editor");
+  }
 	return (
 		<div className="mb-10">
 			<header className="max-w-screen-lg mx-auto p-2">
-				<Navbar />
+				<Navbar user={user} />
 				<div className="my-10 text-center">
 					<h1 className="text-4xl my-10 font-semibold font-gooper">
 						Your discord profile card is unique,

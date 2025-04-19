@@ -9,12 +9,12 @@ import { EditorButton } from "./misc";
 export async function Navbar({
 	user,
 }: { user?: Awaited<ReturnType<typeof validateRequest>> | null }) {
-	const { isAuthenticated } = user ?? (await validateRequest());
+	const { isAuthenticated } = user ?? { isAuthenticated: false};
 
 	return (
 		<nav className="mx-auto p-2 flex justify-between items-center font-gooper!">
 			<Link href="/" className="text-white! text-xl">
-				sparkly.page<span className="text-xl text-muted">[beta]</span>
+        sparkly.page<span className="text-xs text-muted font-hanken-grotesk">{" "}[beta]</span>
 			</Link>
 			<Suspense fallback={"loading..."}>
 				<ul className="flex items-center gap-2">
