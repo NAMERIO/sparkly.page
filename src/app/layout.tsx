@@ -1,5 +1,6 @@
 import { gooper, hankenGrotesk } from "@/fonts";
 import "./globals.css";
+import { PostHogProvider } from "./provider";
 
 export default async function RootLayout({
 	children,
@@ -14,7 +15,9 @@ export default async function RootLayout({
 					overflow: "auto",
 				}}
 			>
-				{children}
+			<PostHogProvider>
+          {children}
+        </PostHogProvider>
 			</body>
 		</html>
 	);
