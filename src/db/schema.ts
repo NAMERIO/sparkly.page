@@ -3,9 +3,6 @@ import type { DiscordLink } from "@/components/user-card";
 import { discordStatus } from "@/helpers/default-discord-user";
 import { json, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
-const DEFAULT_AVATAR =
-	"https://cdn.discordapp.com/avatars/1140994582209904640/217657ddc4fcdfd2245a47844ff0d302.webp?size=160";
-
 export const sessionTable = pgTable("session", {
 	id: text("id").primaryKey(),
 	userId: text("user_id")
@@ -32,7 +29,7 @@ export const usersTable = pgTable("user", {
 	})
 		.notNull()
 		.default("online"),
-	avatar: text("avatar").notNull().default(DEFAULT_AVATAR),
+	avatar: text("avatar").notNull().default(""),
 	roles: json("roles")
 		.notNull()
 		.$type<UserRole[]>()
