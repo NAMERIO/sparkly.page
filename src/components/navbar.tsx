@@ -12,7 +12,7 @@ export async function Navbar({
 	const { isAuthenticated } = user ?? { isAuthenticated: false};
 
 	return (
-		<nav className="mx-auto p-2 flex justify-between items-center font-gooper!">
+		<nav className="mx-auto px-2 py-4 flex justify-between items-center font-gooper!  border-b-2 mb-10">
 			<Link href="/" className="text-white! text-xl">
         sparkly.page<span className="text-xs text-muted font-hanken-grotesk">{" "}[beta]</span>
 			</Link>
