@@ -119,6 +119,7 @@ export const validateRequest = cache(
 		user: UsersTableSelect | null;
 		isAuthenticated: boolean;
 	}> => {
+		console.log("CALLING VALIDATE REQUEST");
 		const cookieStore = await cookies();
 		const sessionToken = cookieStore.get("session")?.value ?? null;
 

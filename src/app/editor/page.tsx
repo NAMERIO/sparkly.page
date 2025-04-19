@@ -20,7 +20,7 @@ export default async function Page() {
 			<div>
 				<Navbar user={user} />
 			</div>
-			<Wrapper user={user.user!} />
+			<Wrapper user={user.user!} isPreview={false} />
 		</>
 	);
 }

@@ -57,14 +57,20 @@ export default async function Page({ params }: Props) {
 
 	return (
 		<div>
-  		<div className="py-10">
-  			<UserCard user={data} />
-  		</div>
-      <div className="pb-10 flex justify-center">
-        <a href={`/api/create_your_own_page?userId=${data.id}`} className={cn("text-white!", buttonVariants({ variant: "discord_muted", size: 'sm' }) )}>
-  			 create your own ✨ sparkly.page
-  			</a>
-      </div>
+			<div className="py-10">
+				<UserCard user={data} />
+			</div>
+			<div className="pb-10 flex justify-center">
+				<a
+					href={`/api/create_your_own_page?userId=${data.id}`}
+					className={cn(
+						"text-white!",
+						buttonVariants({ variant: "discord_muted", size: "sm" }),
+					)}
+				>
+					create your own ✨ sparkly.page
+				</a>
+			</div>
 		</div>
 	);
 }

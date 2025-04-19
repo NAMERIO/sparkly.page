@@ -26,7 +26,7 @@ export function generateId(length: number) {
 
 export const getDiscordAvatar = (id: string, avatar: string, size = 160) => {
 	if (avatar === "") {
-		return "https://cdn.discordapp.com/avatars/1140994582209904640/217657ddc4fcdfd2245a47844ff0d302.webp?size=160";
+		return "https://discordthemes.com/assets/img/pfps/8.png";
 	}
 	return `https://cdn.discordapp.com/avatars/${id}/${avatar}.webp?size=160`;
 };

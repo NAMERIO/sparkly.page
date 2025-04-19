@@ -1,43 +1,47 @@
 import { db } from "@/db";
 import { usersTable } from "@/db/schema";
+import { sendAnalyticsEvent } from "@/helpers/analytics";
+import { zValidator } from "@hono/zod-validator";
 import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { z } from "zod";
 import { validateParams } from "../utils";
-import { zValidator } from "@hono/zod-validator";
-import { sendAnalyticsEvent } from "@/helpers/analytics";
 
 export const PublicRouter = new Hono();
 
 PublicRouter.get(
-  "/create_your_own_page",
-  zValidator("param", z.object({
-    userId: z.string()
-  }), (result, c) => {
-    if ( !result.success ) {
-      return c.redirect('/')
-    }
-  }),
-  async (c) => {
-    try {
-      const { userId } = c.req.valid("param");
-      if ( userId ) {
-        sendAnalyticsEvent({
-          event: "create_your_own_page_clicked",
-          properties: {
-            userId,
-            referral: "create_your_own_page",
-            createdAt: new Date().toISOString()
-          }
-        });
-      }
+	"/create_your_own_page",
+	zValidator(
+		"param",
+		z.object({
+			userId: z.string(),
+		}),
+		(result, c) => {
+			if (!result.success) {
+				return c.redirect("/");
+			}
+		},
+	),
+	async (c) => {
+		try {
+			const { userId } = c.req.valid("param");
+			if (userId) {
+				sendAnalyticsEvent({
+					event: "create_your_own_page_clicked",
+					properties: {
+						userId,
+						referral: "create_your_own_page",
+						createdAt: new Date().toISOString(),
+					},
+				});
+			}
 
-      return c.redirect('/')
-    } catch(e) {
-      return c.redirect('/')
-    }
-  }
-)
+			return c.redirect("/");
+		} catch (e) {
+			return c.redirect("/");
+		}
+	},
+);
 
 PublicRouter.post(
 	"/check-username",

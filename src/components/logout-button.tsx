@@ -1,12 +1,10 @@
 "use client";
 
-import { Button } from "./ui/button";
+import { DiscordButton } from "./discord-card/button";
 
 export function LogoutButton() {
 	return (
-		<Button
-			variant="discord_muted"
-			className="text-white! font-gooper! "
+		<DiscordButton
 			onClick={async () => {
 				await fetch("/api/user/logout", {
 					method: "POST",
@@ -15,6 +13,6 @@ export function LogoutButton() {
 			}}
 		>
 			Logout
-		</Button>
+		</DiscordButton>
 	);
 }

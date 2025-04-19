@@ -30,7 +30,7 @@ export function UserCard({
 					}
 				>
 					<div
-						className="outer_c0bea0 theme-dark theme-midnight images-dark fullSize_c0bea0"
+						className="max-w-[600px] w-full outer_c0bea0 theme-dark theme-midnight images-dark fullSize_c0bea0"
 						style={
 							{
 								"--profile-avatar-border-color":
@@ -262,7 +262,7 @@ export function UserCard({
 															className="defaultColor__4bd52 text-sm/normal_cf4812"
 															data-text-variant="text-sm/normal"
 														>
-															{ getCreationDateFromSnowflake(user.id) }
+															{getCreationDateFromSnowflake(user.id)}
 														</div>
 													</div>
 													{/* <div className="divider_c4eb81" />
@@ -576,17 +576,15 @@ function getCreationDateFromSnowflake(snowflake: string): string {
 	const discordEpoch = 1420070400000;
 
 	// Shift right 22 bits to get the timestamp
-	const binary = BigInt(snowflake) >> 22n;
+	const binary =
+		BigInt(typeof snowflake === "string" ? 1420070400000 : snowflake) >> 22n;
 
 	// Add the Discord epoch
 	const timestamp = Number(binary) + discordEpoch;
 
-	return new Date(timestamp).toLocaleDateString(
-		"en-US",
-		{
-			year: "numeric",
-			month: "short",
-			day: "numeric",
-		}
-	);
+	return new Date(timestamp).toLocaleDateString("en-US", {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+	});
 }

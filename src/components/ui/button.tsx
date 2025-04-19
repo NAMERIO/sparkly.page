@@ -19,7 +19,8 @@ const buttonVariants = cva(
 				ghost: "hover:bg-accent hover:text-accent-foreground",
 				link: "text-primary underline-offset-4 hover:underline",
 				discord: "bg-(--brand-500) text-(--white-500)",
-				discord_muted: "text-(--text-primary) bg-(--background-tertiary) hover:bg-(--primary-600)",
+				discord_muted:
+					"text-(--text-primary) bg-(--background-tertiary) hover:bg-(--primary-600)",
 			},
 			size: {
 				default: "h-10 px-4 py-2",
