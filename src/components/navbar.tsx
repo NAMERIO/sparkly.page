@@ -16,7 +16,6 @@ export async function Navbar({
 			<Link href="/" className="text-white! text-xl">
         sparkly.page<span className="text-xs text-muted font-hanken-grotesk">{" "}[beta]</span>
 			</Link>
-			<Suspense fallback={"loading..."}>
 				<ul className="flex items-center gap-2">
 					<li className="flex justify-between items-center gap-2">
 						{isAuthenticated ? (
@@ -39,7 +38,6 @@ export async function Navbar({
 						)}
 					</li>
 				</ul>
-			</Suspense>
 		</nav>
 	);
 }

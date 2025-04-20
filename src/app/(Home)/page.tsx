@@ -79,13 +79,15 @@ export default async function Home() {
 				</div>
 				<div></div>
 			</div>
-			<footer className="py-20">
+			<footer className="py-20 text-center">
 				<div className="flex justify-center">
 					<img
 						className="size-20"
 						src="https://cdn3.emoji.gg/emojis/67984-jellyseal.gif"
 					/>
 				</div>
+				<p className="text-muted text-xs opacity-70">This website is in no way affiliated with Discord or any other entity.
+</p>
 			</footer>
 		</div>
 	);
