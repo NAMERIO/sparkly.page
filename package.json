@@ -57,6 +57,10 @@
 		"drizzle-kit": "^0.30.6",
 		"eslint": "^9",
 		"eslint-config-next": "15.2.4",
+		"@fullhuman/postcss-purgecss": "^7.0.2",
+		"postcss": "^8.5.3",
+		"postcss-flexbugs-fixes": "^5.0.2",
+		"postcss-preset-env": "^10.1.6",
 		"tailwindcss": "^4",
 		"tsx": "^4.19.3",
 		"typescript": "^5"
