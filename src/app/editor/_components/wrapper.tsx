@@ -44,29 +44,31 @@ export function Wrapper({
 
 	return (
 		<div className="font-hanken-grotesk grid lg:grid-cols-2 gap-2 w-auto">
-			<div className="flex-1 px-2 max-w-[600px] w-full mx-auto">
-				{!isPreview && (
-					<div className="flex items-center justify-between mb-6">
-						<h2 className="text-lg font-semibold md:text-2xl text-(--text-normal)">
-							Edit
-						</h2>
-						<a
-							target="_blank"
-							href={`/user/${username}`}
-							className={cn(
-								"flex gap-2 items-center",
-								buttonVariants({ variant: "discord_muted", size: "xs" }),
-							)}
-							rel="noreferrer"
-						>
-							Preview <ArrowUpRightIcon className="h-4 w-4" />
-						</a>
-					</div>
-				)}
-				<div>{editForm({ options, isPreview })({ form })}</div>
+		  <div className="flex-1 px-2 max-w-[600px] w-full mx-auto">
+			<div className="bg-[#1e1f22] p-6 rounded-lg shadow-md">
+			  {!isPreview && (
+				<div className="flex items-center justify-between mb-6">
+				  <h2 className="text-lg font-semibold md:text-2xl text-(--text-normal)">
+					Edit
+				  </h2>
+				  <a
+					target="_blank"
+					href={`/user/${username}`}
+					className={cn(
+					  "flex gap-2 items-center",
+					  buttonVariants({ variant: "discord_muted", size: "xs" }),
+					)}
+					rel="noreferrer"
+				  >
+					Preview <ArrowUpRightIcon className="h-4 w-4" />
+				  </a>
+				</div>
+			  )}
+			  <div>{editForm({ options, isPreview })({ form })}</div>
 			</div>
-			<div className="flex flex-col flex-1">
-				<UserCard user={user} reactiveUserData={store} />
+		  </div>
+		  <div className="flex flex-col flex-1 px-2 max-w-[600px] w-full mx-auto">
+			  <UserCard user={user} reactiveUserData={store} />
 			</div>
 		</div>
 	);
