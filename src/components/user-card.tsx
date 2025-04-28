@@ -407,6 +407,12 @@ export function getIconSrcFromUrl(url: string | null) {
 				return "/assets/163c8cb9220efc74.svg";
 			case /(?:^|\.)instagram\.com$/.test(hostname):
 				return "/assets/c05dded52023ed43.svg";
+			case /(?:^|\.)youtube\.com$/.test(hostname):
+				return "/assets/icons-youtube.svg";
+			case /(?:^|\.)github\.com$/.test(hostname):
+				return "/assets/icons-github.svg";
+			case /(?:^|\.)twitch\.com$/.test(hostname):
+				return "/assets/icons-twitch.svg";
 			default:
 				return "";
 		}

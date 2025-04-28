@@ -61,12 +61,13 @@ export const editForm = ({
 		...options,
 		render: ({ form }) => {
 			return (
+				<div className="bg-[#2b2d31] p-6 rounded-lg shadow-md">
 				<form
-					className="font-hanken-grotesk"
-					onSubmit={(e) => {
-						e.preventDefault();
-						e.stopPropagation();
-						form.handleSubmit();
+				  className="font-hanken-grotesk"
+				  onSubmit={(e) => {
+					e.preventDefault();
+					e.stopPropagation();
+					form.handleSubmit();
 					}}
 				>
 					<div className="my-2">
@@ -374,10 +375,11 @@ export const editForm = ({
 								</Button>
 							)}
 						/>
-					)}
-				</form>
+						)}
+					</form>
+				</div>
 			);
-		},
+		}
 	});
 
 function AddButtonWithIcon({ onClick }: { onClick: () => void }) {
